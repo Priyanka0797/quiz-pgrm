@@ -1,123 +1,41 @@
-# quiz-pgrm
-https://github.com/Priyanka0797/quiz-pgrm.git
+# studentDetails
+https://github.com/Priyanka0797/student Details.git
 import scanner
 import java.util.Scanner;
 
-public class Quiz {
-
-//main method
-public static void main(String[] args) {
-//variable
-int choices;
-int song;
-int song2;
-int song3;
-int song4;
-int song5;
-
-//scanner for input options
-Scanner scan = new Scanner(System.in);
-System.out.println("Who sing this the song 'Locked Away':");
-
-//choose singer from these 4 options
-System.out.println("Choose 1 for R. City & Adam Levine's. \nChoose 2 for Justin Bieber. \nChoose 3 for Selena Gomez. \nChoose 4 for Katy Perry.");
-song = scan.nextInt();
-
-
-if (song != 1) {
-//if select wrong options
-System.out.println("Your answer is incorrect R. City & Adam Levine's is the right answer .");
+Public class StudentDetails{
+Public static void main(String[]args){
+Public static List<data> get CartList(){
+JSONObject responseDetailsJson = new JSONObject();
+JSONArray jsonArray = new JSONArray();
+List<data> cartList = new Vector<data>(cartMap.keySet().size());
+for(data d:cartMap.keySet()){
+cartList.add(d);
+JSONObject studDetailsJson = new JSONObject();
+studDetailsJson.put("id","101");
+studDetailsJson.put("name","nethu");
+jsonArray.add(studDetailsJson);
 }
-
-{
-while (song == 1) {
-//selected right option
-System.out.println("Congrate you answer is correct");
-
-song++;
+responseDetailsJson.put("StudentDetails",jsonArray);
+return cartList;
 }
-System.out.println();
+ArrayList<String>subject = new ArrayList<String>();
+subject.add("EVS");
+subject.add("POWER ELECTRONICS");
+subject.add("LIC");
+subject.add("MATHS");
+subject.add("DSP");
+log("Raw ArrayList" + subject);
+GsonBuilder gsonBuilder = new GsonBuilder();
+Gson gson =gsonBuilder = gson.toHson(subject);
+log("/nConverted JSONObject" + JSONObject);
+Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+String PrettyJson = prettyGson.toJson(subject);
+log("/nPretty JSONObject"prettyJson);
 }
-
-
-System.out.println("Who sing this the song 'Beauty and the beast':");
-
-//choose singer from these 4 options
-System.out.println("Choose 1 for R. City & Adam Levine's. \nChoose 2 for Justin Bieber. \nChoose 3 for Selena Gomez. \nChoose 4 for Katy Perry.");
-song2 = scan.nextInt();
-
-
-if (song2 != 2) {
-System.out.println("Your answer is incorrect Justin Bieber is the right answer.");
-}
-
-{
-while (song2 == 2) {
-System.out.println("Congrate you answer is correct ");
-song2++;
-}
-System.out.println();
-}
-//name the singer of this song
-System.out.println("Who sing this the song 'Heal the world':");
-
-//choose singer from these 4 options
-System.out.println("Choose 1 for R. City & Adam Levine's. \nChoose 2 for Micheal Jackson. \nChoose 3 for Selena Gomez. \nChoose 4 for Katy Perry.");
-song4 = scan.nextInt();
-
-
-if (song4 != 2) {
-System.out.println("Your answer is incorrect Micheal Jackson is the right answer.");
-}
-
-{
-while (song4 == 2) {
-//display congrate message for right answer
-System.out.println("Congrate you answer is correct");
-song4++;
-}
-System.out.println();
-}
-
-//display Question
-System.out.println("Who sing this the song 'Roar':");
-
-//choose singer from these 4 options
-System.out.println("Choose 1 for R. City & Adam Levine's. \nChoose 2 for Justin Bieber. \nChoose 3 for Selena Gomez. \nChoose 4 for Katy Perry.");
-song3 = scan.nextInt();
-
-
-if (song3 != 4) {
-//display congrate message for incorrect answer
-System.out.println("Your answer is incorrect Katy Perry is the right answer.");
-}
-
-{
-while (song3 == 4) {
-//display congrate message for right answer
-System.out.println("Congrate you answer is correct");
-song3++;
-}
-System.out.println();
-}
-//name of a singer
-System.out.println("Who sing this the song 'The Heart Wants What It Wants ':");
-
-//choose singer from these 4 options
-System.out.println("Choose 1 for R. City & Adam Levine's. \nChoose 2 for Justin Bieber. \nChoose 3 for Selena Gomez. \nChoose 4 for Katy Perry.");
-song5 = scan.nextInt();
-if (song5 != 3) {
-System.out.println("Your answer is incorrect Salena Gomez is the right answer.");
-}
-{
-//using while loop
-while (song5 == 3) {
-//display congrats message for right answer
-System.out.println("Congrats you answer is correct");
-//stop repeating
-song5++;
-} //stop repeating
-System.out.println();
+Private static void log (Object print){
+System.out.println(print);
 }
 }
 }
+
